@@ -8,7 +8,7 @@ import (
 )
 
 // Create an case
-func Create(c *gin.Context) {
+func CaseCreate(c *gin.Context) {
 	db := c.MustGet("db").(*mgo.Database)
 	cases := models.Case{}
 	err := c.Bind(&cases)

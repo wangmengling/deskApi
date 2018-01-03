@@ -3,7 +3,12 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"deskApi/routes"
+	"deskApi/config"
 )
+
+func init() {
+	config.Connect()
+}
 
 func main() {
 	router := gin.Default()

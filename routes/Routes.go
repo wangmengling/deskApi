@@ -13,4 +13,5 @@ func Routes(router *gin.Engine)  {
 			"message": "pong",
 		})
 	})
+	router.GET("/cases", controllers.CaseCreate)
 }

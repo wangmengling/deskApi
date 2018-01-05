@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"deskApi/controllers"
+	"deskapi/controllers"
 )
 
 func Routes(router *gin.Engine)  {

@@ -3,7 +3,7 @@ package controllers
 import (
 	"github.com/gin-gonic/gin"
 	"gopkg.in/mgo.v2"
-	"deskApi/models"
+	"deskapi/models"
 	"net/http"
 )
 

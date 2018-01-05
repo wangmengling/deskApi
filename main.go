@@ -1,9 +1,10 @@
 package main
 
 import (
+	"deskapi/config"
+	"deskapi/routes"
+
 	"github.com/gin-gonic/gin"
-	"deskApi/routes"
-	"deskApi/config"
 )
 
 func init() {

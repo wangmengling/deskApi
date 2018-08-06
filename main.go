@@ -29,7 +29,15 @@ func main() {
 	router.Use(ErrorHandler)
 	routes.Routes(router)
 
+<<<<<<< HEAD
 	router.Run(":3002") // listen and serve on 0.0.0.0:8080
+=======
+<<<<<<< HEAD
+	router.Run(":3002") // listen and serve on 0.0.0.0:8080
+=======
+	router.Run("3002") // listen and serve on 0.0.0.0:8080
+>>>>>>> 5f0d6c036d6f1eb9b3b158437e7fccb8f3be2c8e
+>>>>>>> cc1e30c51857792ef8f8dacd4b41f7f8f207ee39
 }
 
 func Connect(c *gin.Context) {

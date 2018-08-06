@@ -1,9 +1,10 @@
-package config
+package db
 
 import (
 	"fmt"
 	"os"
 	"gopkg.in/mgo.v2"
+
 )
 
 var (
@@ -39,3 +40,15 @@ func Connect() {
 	Session = s
 	Mongo = mongo
 }
+
+//func GetMgo() *mgo.Session {
+//	return Session
+//}
+//
+//func GetDataBase() *mgo.Database {
+//	return database
+//}
+//
+//func GetErrNotFound() error {
+//	return mgo.ErrNotFound
+//}

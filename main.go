@@ -16,5 +16,5 @@ func main() {
 	router.Static("static", "./static")
 	routes.Routes(router)
 
-	router.Run() // listen and serve on 0.0.0.0:8080
+	router.Run("3002") // listen and serve on 0.0.0.0:8080
 }

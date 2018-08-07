@@ -1,12 +1,12 @@
 package main
 
 import (
-	"deskapi/config"
 	"deskapi/routes"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	//"time"
+	"deskapi/config"
 )
 
 func init() {

@@ -2,16 +2,9 @@ package db
 
 import (
 	"fmt"
-	"gopkg.in/mgo.v2"
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
 	"os"
->>>>>>> 5f0d6c036d6f1eb9b3b158437e7fccb8f3be2c8e
->>>>>>> cc1e30c51857792ef8f8dacd4b41f7f8f207ee39
+	"gopkg.in/mgo.v2"
+
 )
 
 var (
@@ -31,7 +24,7 @@ const (
 // Connect connects to mongodb
 func Connect() {
 	uri := os.Getenv("MONGODB_URL")
-	//
+
 	if len(uri) == 0 {
 		uri = MongoDBUrl
 	}

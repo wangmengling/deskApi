@@ -17,4 +17,6 @@ func Routes(router *gin.Engine)  {
 	//router.POST("/case/list/:pageIndex/:pageSize", controllers.CasesList)
 	router.POST("/case/list", controllers.CasesList)
 	router.POST("/case/detail",controllers.CasesDetail)
+	router.POST("/color/list",controllers.ColorsList)
+	router.POST("/style/list",controllers.StylesList)
 }

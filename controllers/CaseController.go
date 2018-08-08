@@ -29,6 +29,7 @@ func CaseCreate(c *gin.Context) {
 	c.Redirect(http.StatusMovedPermanently, "/cases")
 }
 
+
 func CasesList(c *gin.Context)  {
 
 	db := c.MustGet("db").(*mgo.Database)

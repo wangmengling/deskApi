@@ -37,13 +37,24 @@ func CasesList(c *gin.Context)  {
 	cases := []models.Cases{}
 	pageSize := c.PostForm("pageSize")
 	pageIndex := c.PostForm("pageIndex")
-	size, err := strconv.Atoi(pageSize)
-	fmt.Print(err)
-	index, error := strconv.Atoi(pageIndex)
-	fmt.Print(error)
-	db.C(models.CollectionCases).Find(nil).Limit(size).Skip(index).All(&cases)
+	size, _ := strconv.Atoi(pageSize)
+	index, _ := strconv.Atoi(pageIndex)
+	query := bson.M{}
+	color := c.PostForm("color")
+	style := c.PostForm("style")
+	fmt.Print(color)
+	if len(color) > 0 {
+		query["color"] = color
+	}
 
-	count,err := db.C(models.CollectionCases).Count()
+	if len(style) > 0 {
+		query["style"] = style
+	}
+
+	fmt.Print(query)
+	db.C(models.CollectionCases).Find(&query).Limit(size).Skip(index).All(&cases)
+
+	count,_ := db.C(models.CollectionCases).Count()
 	c.JSON(200, gin.H{
 		"code":1,
 

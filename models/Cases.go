@@ -23,5 +23,6 @@ type Cases struct {
 	CreateTime string  `bson:"createTime"`
 	ThumbUrl string  `bson:"thumbUrl"`
 	VideoUrl string  `bson:"videoUrl"`
+	Description string `bson:"description"`
 	ImageUrl [][]bson.M  `bson:"imageUrl"`
 }

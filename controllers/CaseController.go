@@ -51,25 +51,16 @@ func CasesList(c *gin.Context)  {
 		query["style"] = style
 	}
 
-<<<<<<< HEAD
 	fmt.Print(size)
 	db.C(models.CollectionCases).Find(&query).Limit(size).Skip(index * size).All(&cases)
-=======
-	fmt.Print(query)
-	db.C(models.CollectionCases).Find(&query).Limit(size).Skip(index).All(&cases)
->>>>>>> 66b83287b9f53ff6e56d1a0714dfbac49d8cb9b7
-
 	count,_ := db.C(models.CollectionCases).Count()
 	c.JSON(200, gin.H{
 		"code":1,
 
 		"data": gin.H{
 			"list":cases,
-<<<<<<< HEAD
 			"pageIndex":pageIndex,
 			"pageSize":pageSize,
-=======
->>>>>>> 66b83287b9f53ff6e56d1a0714dfbac49d8cb9b7
 			"pageTotal":count,
 			"count":count,
 			},
